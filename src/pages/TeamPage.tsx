@@ -7,6 +7,17 @@ function StatusDot({ status }: { status: Status }) {
   return <span className={`status-dot status-dot--${status}`} aria-label={status} />
 }
 
+function formatJoined(iso: string) {
+  const [y, m, d] = iso.split('-').map(Number)
+  const date = new Date(y, m - 1, d)
+  return date.toLocaleDateString('en-US', {
+    weekday: 'short',
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })
+}
+
 export function TeamPage() {
   const [search, setSearch] = useState('')
 
@@ -25,7 +36,7 @@ export function TeamPage() {
       <div className="dash__header">
         <div>
           <h1 className="dash__title">Team</h1>
-          <p className="dash__date">{teamMembers.length} employees in this region view</p>
+          <p className="dash__date">{teamMembers.length} employees</p>
         </div>
       </div>
 
@@ -33,7 +44,7 @@ export function TeamPage() {
         <input
           type="search"
           className="filter-bar__search"
-          placeholder="Search name, role, region…"
+          placeholder="Search name, role…"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -46,16 +57,14 @@ export function TeamPage() {
               <tr>
                 <th>Employee</th>
                 <th>Role</th>
-                <th>Region</th>
                 <th>Status</th>
-                <th>Deliveries</th>
                 <th>Joined</th>
               </tr>
             </thead>
             <tbody>
               {filtered.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="table-empty">No employees match.</td>
+                  <td colSpan={4} className="table-empty">No employees match.</td>
                 </tr>
               ) : (
                 filtered.map((m) => (
@@ -70,15 +79,15 @@ export function TeamPage() {
                       </div>
                     </td>
                     <td>{m.role}</td>
-                    <td>{m.region}</td>
                     <td>
                       <span className="status-cell">
                         <StatusDot status={m.status} />
-                        {m.status === 'on-leave' ? 'On leave' : m.status.charAt(0).toUpperCase() + m.status.slice(1)}
+                        {m.status === 'on-leave'
+                          ? 'On leave'
+                          : m.status.charAt(0).toUpperCase() + m.status.slice(1)}
                       </span>
                     </td>
-                    <td>{m.deliveries > 0 ? m.deliveries.toLocaleString() : '—'}</td>
-                    <td>{m.joined}</td>
+                    <td>{formatJoined(m.joined)}</td>
                   </tr>
                 ))
               )}

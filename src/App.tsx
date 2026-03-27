@@ -6,7 +6,6 @@ import { AnnouncementsPage } from './pages/AnnouncementsPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { DeliveriesPage } from './pages/DeliveriesPage'
 import { LoginPage } from './pages/LoginPage'
-import { ReportsPage } from './pages/ReportsPage'
 import { RoutesPage } from './pages/RoutesPage'
 import { TeamPage } from './pages/TeamPage'
 import './App.css'
@@ -48,7 +47,6 @@ export default function App() {
             <Route path="/deliveries" element={<DeliveriesPage />} />
             <Route path="/routes" element={<RoutesPage />} />
             <Route path="/team" element={<TeamPage />} />
-            <Route path="/reports" element={<ReportsPage />} />
           </Route>
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
