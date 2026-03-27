@@ -1,4 +1,4 @@
-import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Navigate, Route, HashRouter, Routes } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { useAuth } from './context/useAuth'
 import { AppLayout } from './layout/AppLayout'
@@ -8,7 +8,6 @@ import { LoginPage } from './pages/LoginPage'
 import { ReportsPage } from './pages/ReportsPage'
 import { RoutesPage } from './pages/RoutesPage'
 import { TeamPage } from './pages/TeamPage'
-import { routerBasename } from './lib/basename'
 import './App.css'
 
 function RequireAuth({ children }: { children: React.ReactNode }) {
@@ -26,7 +25,7 @@ function RedirectIfAuthed({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <AuthProvider>
-      <Router basename={routerBasename()}>
+      <HashRouter>
         <Routes>
           <Route
             path="/login"
@@ -51,7 +50,7 @@ export default function App() {
           </Route>
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
-      </Router>
+      </HashRouter>
     </AuthProvider>
   )
 }
