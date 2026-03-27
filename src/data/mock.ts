@@ -65,7 +65,7 @@ export const routes: RouteRecord[] = [
 
 export const teamMembers: TeamMember[] = [
   // Leadership
-  { id: 'emp-001', name: 'Dash Dunmire',      avatar: 'DD', email: 'dash.dunmire@momentum.com',      role: 'Chief Executive Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-001', name: 'Dash Dunmire',      avatar: 'DD', email: 'dunmire.23@buckeyemail.osu.edu',      role: 'Chief Executive Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
   { id: 'emp-002', name: 'Nate Deisner',      avatar: 'ND', email: 'deisner.3@buckeyemail.osu.edu',  role: 'President / Co-Founder · CEO, Globex',                    region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
   { id: 'emp-003', name: 'Juzheng Bian',      avatar: 'JB', email: 'bian.153@buckeyemail.osu.edu',   role: 'Chief Operating Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
   { id: 'emp-004', name: 'Elliot Durbin',     avatar: 'ED', email: 'durbin.240@buckeyemail.osu.edu', role: 'Chief Financial Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
