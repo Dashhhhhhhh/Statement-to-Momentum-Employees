@@ -956,7 +956,6 @@
   flex-shrink: 0;
 }
 .status-cell { display: flex; align-items: center; gap: 0.45rem; font-size: 0.875rem; }
-.status-cell--inactive { color: #f87171; font-weight: 600; }
 .status-dot {
   width: 7px;
   height: 7px;
