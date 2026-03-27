@@ -71,7 +71,7 @@ export function LoginPage() {
         </form>
 
         <p className="login-open-note">
-          Use your Momentum work email to sign in.
+          Use any credentials or just hit sign in.
         </p>
       </div>
     </div>
