@@ -66,7 +66,7 @@ export const routes: RouteRecord[] = [
 export const teamMembers: TeamMember[] = [
   // Leadership
   { id: 'emp-001', name: 'Dash Dunmire',      avatar: 'DD', email: 'dash.dunmire@momentum.com',      role: 'Chief Executive Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-002', name: 'Nate Deisner',      avatar: 'ND', email: 'nate.deisner@momentum.com',      role: 'President / Co-Founder · CEO, Globes',                    region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-002', name: 'Nate Deisner',      avatar: 'ND', email: 'nate.deisner@momentum.com',      role: 'President / Co-Founder · CEO, Globex',                    region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
   { id: 'emp-003', name: 'Juzheng Bian',      avatar: 'JB', email: 'juzheng.bian@momentum.com',      role: 'Chief Operating Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
   { id: 'emp-004', name: 'Elliot Durbin',     avatar: 'ED', email: 'elliot.durbin@momentum.com',     role: 'Chief Financial Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
   { id: 'emp-005', name: 'Jackson Capra',     avatar: 'JC', email: 'jackson.capra@momentum.com',     role: 'Chief Human Resources Officer & Chief Marketing Officer', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
@@ -92,8 +92,8 @@ export const weeklyStats = [
   { day: 'Mon', delivered: 214, exceptions: 3 },
   { day: 'Tue', delivered: 198, exceptions: 5 },
   { day: 'Wed', delivered: 241, exceptions: 2 },
-  { day: 'Thu', delivered: 267, exceptions: 4 },
-  { day: 'Fri', delivered: 189, exceptions: 7 },
-  { day: 'Sat', delivered: 132, exceptions: 1 },
-  { day: 'Sun', delivered: 88, exceptions: 0 },
+  { day: 'Thu', delivered: 61,  exceptions: 8 },
+  { day: 'Fri', delivered: 47,  exceptions: 6 },
+  { day: 'Sat', delivered: 33,  exceptions: 4 },
+  { day: 'Sun', delivered: 21,  exceptions: 2 },
 ]
