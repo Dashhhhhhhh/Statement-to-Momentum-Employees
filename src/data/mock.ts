@@ -64,11 +64,12 @@ export const routes: RouteRecord[] = [
 ]
 
 export const teamMembers: TeamMember[] = [
-  { id: 'emp-001', name: 'Dash Dunmire',   avatar: 'DD', email: 'dash.dunmire@momentum.com',   role: 'Chief Executive Officer',                              region: 'Central', status: 'active', joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-002', name: 'Nate Deisner',   avatar: 'ND', email: 'nate.deisner@momentum.com',   role: 'President / Co-Founder · CEO, Globes',                 region: 'Central', status: 'active', joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-003', name: 'Juzheng Bian',   avatar: 'JB', email: 'juzheng.bian@momentum.com',   role: 'Chief Operating Officer',                              region: 'Central', status: 'active', joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-004', name: 'Elliot Durbin',  avatar: 'ED', email: 'elliot.durbin@momentum.com',  role: 'Chief Financial Officer',                              region: 'Central', status: 'active', joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-005', name: 'Jackson Capra',  avatar: 'JC', email: 'jackson.capra@momentum.com',  role: 'Chief Human Resources Officer & Chief Marketing Officer', region: 'Central', status: 'active', joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-001', name: 'Dash Dunmire',     avatar: 'DD', email: 'dash.dunmire@momentum.com',     role: 'Chief Executive Officer',                                 region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-002', name: 'Nate Deisner',     avatar: 'ND', email: 'nate.deisner@momentum.com',     role: 'President / Co-Founder · CEO, Globes',                    region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-003', name: 'Juzheng Bian',     avatar: 'JB', email: 'juzheng.bian@momentum.com',     role: 'Chief Operating Officer',                                 region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-004', name: 'Elliot Durbin',    avatar: 'ED', email: 'elliot.durbin@momentum.com',    role: 'Chief Financial Officer',                                 region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-005', name: 'Jackson Capra',    avatar: 'JC', email: 'jackson.capra@momentum.com',    role: 'Chief Human Resources Officer & Chief Marketing Officer', region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-006', name: 'Ashley Williams',  avatar: 'AW', email: 'ashley.williams@momentum.com',  role: 'Driver',                                                  region: 'Central', status: 'inactive', joined: '2026-03-25', deliveries: 0 },
 ]
 
 export const weeklyStats = [

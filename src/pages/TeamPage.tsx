@@ -80,7 +80,7 @@ export function TeamPage() {
                     </td>
                     <td>{m.role}</td>
                     <td>
-                      <span className="status-cell">
+                      <span className={`status-cell${m.status === 'inactive' ? ' status-cell--inactive' : ''}`}>
                         <StatusDot status={m.status} />
                         {m.status === 'on-leave'
                           ? 'On leave'

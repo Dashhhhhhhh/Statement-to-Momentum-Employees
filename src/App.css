@@ -956,6 +956,7 @@
   flex-shrink: 0;
 }
 .status-cell { display: flex; align-items: center; gap: 0.45rem; font-size: 0.875rem; }
+.status-cell--inactive { color: #f87171; font-weight: 600; }
 .status-dot {
   width: 7px;
   height: 7px;
@@ -964,7 +965,7 @@
 }
 .status-dot--active { background: var(--green); box-shadow: 0 0 6px rgba(16, 185, 129, 0.5); }
 .status-dot--on-leave { background: var(--amber); }
-.status-dot--inactive { background: var(--text); }
+.status-dot--inactive { background: var(--red-500); box-shadow: 0 0 6px rgba(227, 24, 55, 0.5); }
 
 /* Reports */
 .driver-bar-list { list-style: none; margin: 0; padding: 0.75rem 1.25rem; display: flex; flex-direction: column; gap: 0.65rem; }
