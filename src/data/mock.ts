@@ -91,7 +91,7 @@ export const teamMembers: TeamMember[] = [
 export const weeklyStats = [
   { day: 'Mon', delivered: 214, exceptions: 3 },
   { day: 'Tue', delivered: 198, exceptions: 5 },
-  { day: 'Wed', delivered: 241, exceptions: 2 },
+  { day: 'Wed', delivered: 173, exceptions: 2 },
   { day: 'Thu', delivered: 61,  exceptions: 8 },
   { day: 'Fri', delivered: 47,  exceptions: 6 },
   { day: 'Sat', delivered: 33,  exceptions: 4 },
