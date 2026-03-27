@@ -1,3 +1,181 @@
+/* ——— Incident banner ——— */
+.incident-banner {
+  background: linear-gradient(90deg, rgba(180, 30, 0, 0.92), rgba(140, 10, 30, 0.92));
+  border-bottom: 1px solid rgba(255, 100, 80, 0.3);
+  z-index: 15;
+}
+
+.incident-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1.25rem;
+  max-width: 100%;
+}
+
+.incident-banner__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #fca5a5;
+}
+
+.incident-banner__text {
+  margin: 0;
+  flex: 1;
+  font-size: 0.875rem;
+  color: #fee2e2;
+  line-height: 1.45;
+}
+
+.incident-banner__text strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.incident-banner__link {
+  color: #fecaca;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.incident-banner__link:hover {
+  text-decoration: underline;
+}
+
+.incident-banner__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 5px;
+  color: #fca5a5;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.incident-banner__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.incident-banner__close svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+/* ——— Sidebar urgent badge ——— */
+.sidebar__link--urgent {
+  color: #fca5a5 !important;
+}
+
+.sidebar__link--urgent.sidebar__link--active {
+  background: rgba(200, 16, 46, 0.18) !important;
+  color: #fca5a5 !important;
+}
+
+.sidebar__badge {
+  margin-left: auto;
+  background: var(--red-500);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ——— Announcements page ——— */
+.announcement-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.announcement-card--urgent {
+  border-color: rgba(200, 16, 46, 0.45);
+  background: linear-gradient(
+    160deg,
+    rgba(200, 16, 46, 0.07),
+    var(--surface-2) 40%
+  );
+}
+
+.announcement-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.announcement-card__tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(200, 16, 46, 0.14);
+  border: 1px solid rgba(200, 16, 46, 0.3);
+  color: #fca5a5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.announcement-card__date {
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.announcement-card__title {
+  margin: 0;
+  padding: 1.25rem 1.5rem 0.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  letter-spacing: -0.01em;
+}
+
+.announcement-card__body {
+  padding: 0.75rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.announcement-card__body p {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(226, 232, 240, 0.9);
+  line-height: 1.7;
+}
+
+.announcement-card__footer {
+  padding: 0.85rem 1.5rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.announcement-card__signed {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text);
+}
+
+/* Open note below login form */
+.login-open-note {
+  margin: 1.25rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text);
+  text-align: center;
+}
+
 /* ——— Login ——— */
 .login-page {
   min-height: 100svh;

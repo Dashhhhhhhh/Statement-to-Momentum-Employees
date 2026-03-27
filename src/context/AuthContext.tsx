@@ -78,14 +78,28 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   const login = useCallback(
-    async (email: string, password: string): Promise<{ ok: boolean; error?: string }> => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    async (email: string, _pw: string): Promise<{ ok: boolean; error?: string }> => {
       await new Promise((r) => setTimeout(r, 600))
+      // Match known employee accounts; otherwise create a generic employee session
       const record = MOCK_USERS[email.toLowerCase()]
-      if (!record || record.password !== password) {
-        return { ok: false, error: 'Invalid email or password.' }
+      let user: Employee
+      if (record) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { password: _, ...rest } = record
+        user = rest
+      } else {
+        const name = email.split('@')[0].replace(/[._]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+        const initials = name.split(' ').slice(0, 2).map((w) => w[0]).join('').toUpperCase()
+        user = {
+          id: `emp-${Date.now()}`,
+          name,
+          email: email.toLowerCase(),
+          role: 'driver',
+          region: 'Central',
+          avatar: initials || '??',
+        }
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { password: _, ...user } = record
       sessionStorage.setItem(SESSION_KEY, JSON.stringify(user))
       setState({ user, loading: false })
       return { ok: true }

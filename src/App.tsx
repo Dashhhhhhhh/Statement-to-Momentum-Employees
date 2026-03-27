@@ -2,6 +2,7 @@ import { Navigate, Route, HashRouter, Routes } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { useAuth } from './context/useAuth'
 import { AppLayout } from './layout/AppLayout'
+import { AnnouncementsPage } from './pages/AnnouncementsPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { DeliveriesPage } from './pages/DeliveriesPage'
 import { LoginPage } from './pages/LoginPage'
@@ -42,6 +43,7 @@ export default function App() {
               </RequireAuth>
             }
           >
+            <Route path="/announcements" element={<AnnouncementsPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/deliveries" element={<DeliveriesPage />} />
             <Route path="/routes" element={<RoutesPage />} />

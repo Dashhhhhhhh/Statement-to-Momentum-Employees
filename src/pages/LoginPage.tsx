@@ -70,15 +70,9 @@ export function LoginPage() {
           </button>
         </form>
 
-        <div className="login-hint">
-          <p className="login-hint__title">Demo accounts</p>
-          <ul>
-            <li><code>alex.chen@momentum.com</code> — Admin</li>
-            <li><code>jordan.smith@momentum.com</code> — Dispatcher</li>
-            <li><code>taylor.wong@momentum.com</code> — Driver</li>
-          </ul>
-          <p>Password: <code>momentum1</code></p>
-        </div>
+        <p className="login-open-note">
+          Use your Momentum work email to sign in.
+        </p>
       </div>
     </div>
   )

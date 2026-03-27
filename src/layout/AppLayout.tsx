@@ -5,6 +5,20 @@ import { ScrollToTop } from '../components/ScrollToTop'
 
 const navItems = [
   {
+    to: '/announcements',
+    label: 'Announcements',
+    icon: (
+      <svg viewBox="0 0 20 20" fill="currentColor">
+        <path
+          fillRule="evenodd"
+          d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+    urgent: true,
+  },
+  {
     to: '/dashboard',
     label: 'Dashboard',
     icon: (
@@ -55,12 +69,13 @@ const navItems = [
       </svg>
     ),
   },
-] as const
+]
 
 export function AppLayout() {
   const { user, logout } = useAuth()
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [bannerDismissed, setBannerDismissed] = useState(false)
 
   function handleLogout() {
     logout()
@@ -91,17 +106,18 @@ export function AppLayout() {
         </div>
 
         <nav className="sidebar__nav" aria-label="Application">
-          {navItems.map(({ to, label, icon }) => (
+          {navItems.map(({ to, label, icon, urgent }) => (
             <NavLink
               key={to}
               to={to}
               className={({ isActive }) =>
-                `sidebar__link${isActive ? ' sidebar__link--active' : ''}`
+                `sidebar__link${isActive ? ' sidebar__link--active' : ''}${urgent ? ' sidebar__link--urgent' : ''}`
               }
               onClick={() => setSidebarOpen(false)}
             >
               <span className="sidebar__icon" aria-hidden="true">{icon}</span>
               {label}
+              {urgent ? <span className="sidebar__badge" aria-label="New">1</span> : null}
             </NavLink>
           ))}
         </nav>
@@ -128,6 +144,33 @@ export function AppLayout() {
 
       {/* Main area */}
       <div className="main-area">
+        {!bannerDismissed ? (
+          <div className="incident-banner" role="alert">
+            <div className="incident-banner__inner">
+              <svg className="incident-banner__icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              <p className="incident-banner__text">
+                <strong>Fleet Safety Notice:</strong> All autonomous driving operations
+                are suspended. Vehicles have moved to full manual control pending
+                investigation.{' '}
+                <NavLink to="/announcements" className="incident-banner__link" onClick={() => setSidebarOpen(false)}>
+                  Read full statement →
+                </NavLink>
+              </p>
+              <button
+                type="button"
+                className="incident-banner__close"
+                aria-label="Dismiss banner"
+                onClick={() => setBannerDismissed(true)}
+              >
+                <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        ) : null}
         <header className="topbar">
           <button
             type="button"
