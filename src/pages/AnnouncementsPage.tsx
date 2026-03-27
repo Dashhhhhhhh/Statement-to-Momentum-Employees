@@ -28,9 +28,13 @@ export function AnnouncementsPage() {
             a thorough investigation in coordination with authorities.
           </p>
           <p>
-            If you are an employee and don't feel safe, please feel free to take a
-            leave, but your experience and expertise is what is keeping us safe and
-            helping us move forward from this.
+            We understand that some employees may feel uneasy or unsafe at this
+            time, and any employee with immediate safety concerns may speak with
+            their manager or Human Resources about taking leave. We also encourage
+            employees to bring their concerns forward directly, as we believe the
+            most productive path is to work through this issue together with
+            professionalism, open communication, and a shared commitment to one
+            another and the future of Momentum.
           </p>
         </div>
         <div className="announcement-card__footer">
