@@ -55,12 +55,12 @@ export const deliveries: Delivery[] = [
 ]
 
 export const routes: RouteRecord[] = [
-  { id: 'RT-03', name: 'Detroit Metro South', driver: 'Alicia Vega', region: 'Midwest', stops: 12, completed: 12, status: 'complete', vehicleId: 'VH-2218', startTime: '06:30', estimatedEnd: '15:00' },
-  { id: 'RT-04', name: 'Cincinnati Loop', driver: 'Unassigned', region: 'Ohio Valley', stops: 8, completed: 0, status: 'unassigned', vehicleId: '', startTime: '08:00', estimatedEnd: '14:30' },
-  { id: 'RT-07', name: 'Chicago–Columbus Corridor', driver: 'Marcus Reed', region: 'Central', stops: 16, completed: 9, status: 'active', vehicleId: 'VH-1104', startTime: '05:45', estimatedEnd: '17:30' },
-  { id: 'RT-09', name: 'Louisville–Cleveland Express', driver: 'Darnell Kim', region: 'Ohio Valley', stops: 10, completed: 6, status: 'active', vehicleId: 'VH-3302', startTime: '07:00', estimatedEnd: '16:00' },
-  { id: 'RT-12', name: 'Indy–Milwaukee Northern', driver: 'Priya Nair', region: 'Great Lakes', stops: 14, completed: 11, status: 'active', vehicleId: 'VH-0857', startTime: '06:00', estimatedEnd: '16:45' },
-  { id: 'RT-15', name: 'St. Louis–KC Westbound', driver: 'Unassigned', region: 'Central', stops: 7, completed: 0, status: 'unassigned', vehicleId: '', startTime: '09:00', estimatedEnd: '15:00' },
+  { id: 'RT-04', name: 'Columbus Southside — Groveport & Obetz',   driver: 'Ashley Williams', region: 'Central Ohio', stops: 8,  completed: 8, status: 'complete',   vehicleId: 'VH-2218', startTime: '06:00', estimatedEnd: '13:30' },
+  { id: 'RT-07', name: 'Columbus East — Rickenbacker Corridor',     driver: 'Ashley Williams', region: 'Central Ohio', stops: 10, completed: 6, status: 'active',     vehicleId: 'VH-1104', startTime: '07:30', estimatedEnd: '15:45' },
+  { id: 'RT-09', name: 'Columbus West — Grove City & Georgesville', driver: 'Unassigned',      region: 'Central Ohio', stops: 7,  completed: 0, status: 'unassigned', vehicleId: '',        startTime: '08:00', estimatedEnd: '14:00' },
+  { id: 'RT-11', name: 'Canal Winchester & Pickerington Loop',      driver: 'Unassigned',      region: 'Central Ohio', stops: 6,  completed: 0, status: 'unassigned', vehicleId: '',        startTime: '09:00', estimatedEnd: '14:30' },
+  { id: 'RT-13', name: 'Columbus North — Crosswind & Polaris',      driver: 'Ashley Williams', region: 'Central Ohio', stops: 9,  completed: 4, status: 'active',     vehicleId: 'VH-3302', startTime: '06:45', estimatedEnd: '15:00' },
+  { id: 'RT-15', name: 'LCK Air Hub Express',                       driver: 'Unassigned',      region: 'Central Ohio', stops: 5,  completed: 0, status: 'unassigned', vehicleId: '',        startTime: '10:00', estimatedEnd: '14:00' },
 ]
 
 export const teamMembers: TeamMember[] = [
