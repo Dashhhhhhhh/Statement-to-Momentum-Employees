@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { teamMembers } from '../data/mock'
 
-type Status = 'active' | 'on-leave' | 'inactive'
+type Status = 'active' | 'on-leave' | 'inactive' | 'incomplete'
 
 function StatusDot({ status }: { status: Status }) {
   return <span className={`status-dot status-dot--${status}`} aria-label={status} />
@@ -84,6 +84,8 @@ export function TeamPage() {
                         <StatusDot status={m.status} />
                         {m.status === 'on-leave'
                           ? 'On leave'
+                          : m.status === 'incomplete'
+                          ? 'Incomplete'
                           : m.status.charAt(0).toUpperCase() + m.status.slice(1)}
                       </span>
                     </td>

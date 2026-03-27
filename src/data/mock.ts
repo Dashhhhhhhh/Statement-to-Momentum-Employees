@@ -36,7 +36,7 @@ export interface TeamMember {
   email: string
   role: string
   region: string
-  status: 'active' | 'on-leave' | 'inactive'
+  status: 'active' | 'on-leave' | 'inactive' | 'incomplete'
   joined: string
   deliveries: number
 }
@@ -64,12 +64,28 @@ export const routes: RouteRecord[] = [
 ]
 
 export const teamMembers: TeamMember[] = [
-  { id: 'emp-001', name: 'Dash Dunmire',     avatar: 'DD', email: 'dash.dunmire@momentum.com',     role: 'Chief Executive Officer',                                 region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-002', name: 'Nate Deisner',     avatar: 'ND', email: 'nate.deisner@momentum.com',     role: 'President / Co-Founder · CEO, Globes',                    region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-003', name: 'Juzheng Bian',     avatar: 'JB', email: 'juzheng.bian@momentum.com',     role: 'Chief Operating Officer',                                 region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-004', name: 'Elliot Durbin',    avatar: 'ED', email: 'elliot.durbin@momentum.com',    role: 'Chief Financial Officer',                                 region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-005', name: 'Jackson Capra',    avatar: 'JC', email: 'jackson.capra@momentum.com',    role: 'Chief Human Resources Officer & Chief Marketing Officer', region: 'Central', status: 'active',   joined: '2026-03-25', deliveries: 0 },
-  { id: 'emp-006', name: 'Ashley Williams',  avatar: 'AW', email: 'ashley.williams@momentum.com',  role: 'Driver',                                                  region: 'Central', status: 'inactive', joined: '2026-03-25', deliveries: 0 },
+  // Leadership
+  { id: 'emp-001', name: 'Dash Dunmire',      avatar: 'DD', email: 'dash.dunmire@momentum.com',      role: 'Chief Executive Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-002', name: 'Nate Deisner',      avatar: 'ND', email: 'nate.deisner@momentum.com',      role: 'President / Co-Founder · CEO, Globes',                    region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-003', name: 'Juzheng Bian',      avatar: 'JB', email: 'juzheng.bian@momentum.com',      role: 'Chief Operating Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-004', name: 'Elliot Durbin',     avatar: 'ED', email: 'elliot.durbin@momentum.com',     role: 'Chief Financial Officer',                                 region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-005', name: 'Jackson Capra',     avatar: 'JC', email: 'jackson.capra@momentum.com',     role: 'Chief Human Resources Officer & Chief Marketing Officer', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  // Drivers
+  { id: 'emp-006', name: 'Ashley Williams',   avatar: 'AW', email: 'ashley.williams@momentum.com',   role: 'Driver', region: 'Central Ohio', status: 'incomplete', joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-007', name: 'Marcus Reid',        avatar: 'MR', email: 'marcus.reid@momentum.com',        role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-008', name: 'Darnell Brooks',     avatar: 'DB', email: 'darnell.brooks@momentum.com',     role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-009', name: 'Priya Santos',       avatar: 'PS', email: 'priya.santos@momentum.com',       role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-010', name: 'Tyler Nguyen',       avatar: 'TN', email: 'tyler.nguyen@momentum.com',       role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-011', name: 'Keisha Monroe',      avatar: 'KM', email: 'keisha.monroe@momentum.com',      role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-012', name: 'Jorge Castillo',     avatar: 'JC', email: 'jorge.castillo@momentum.com',     role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-013', name: 'Alicia Vega',        avatar: 'AV', email: 'alicia.vega@momentum.com',        role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-014', name: 'Samuel Okafor',      avatar: 'SO', email: 'samuel.okafor@momentum.com',      role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-015', name: 'Brittany Hall',      avatar: 'BH', email: 'brittany.hall@momentum.com',      role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-016', name: 'Ramon Delgado',      avatar: 'RD', email: 'ramon.delgado@momentum.com',      role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-017', name: 'Destiny Washington', avatar: 'DW', email: 'destiny.washington@momentum.com', role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-018', name: 'Chris Park',         avatar: 'CP', email: 'chris.park@momentum.com',         role: 'Driver', region: 'Central Ohio', status: 'active',     joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-019', name: 'Tiana Foster',       avatar: 'TF', email: 'tiana.foster@momentum.com',       role: 'Driver', region: 'Central Ohio', status: 'on-leave',  joined: '2026-03-25', deliveries: 0 },
+  { id: 'emp-020', name: 'Devon McAllister',   avatar: 'DM', email: 'devon.mcallister@momentum.com',   role: 'Driver', region: 'Central Ohio', status: 'on-leave',  joined: '2026-03-25', deliveries: 0 },
 ]
 
 export const weeklyStats = [
