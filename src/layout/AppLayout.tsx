@@ -108,7 +108,7 @@ export function AppLayout() {
             >
               <span className="sidebar__icon" aria-hidden="true">{icon}</span>
               {label}
-              {urgent ? <span className="sidebar__badge" aria-label="New">1</span> : null}
+              {urgent ? <span className="sidebar__badge" aria-label="New">2</span> : null}
             </NavLink>
           ))}
         </nav>
